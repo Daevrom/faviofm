@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" aria-label="Sigma">
+  <defs><radialGradient id="ng" cx="50%" cy="40%" r="70%"><stop offset="0" stop-color="#2C3A60"/><stop offset="0.6" stop-color="#1F2A4E"/><stop offset="1" stop-color="#15203C"/></radialGradient></defs>
+  <rect width="100" height="100" rx="22" fill="url(#ng)"/>
+  <circle cx="50" cy="50" r="40" fill="#2C3A60"/>
+  <path d="M28,22 L76,22 L76,31" fill="none" stroke="#F4EFE5" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M28,78 L76,78 L76,69" fill="none" stroke="#F4EFE5" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M28,22 L56,50" fill="none" stroke="#5D8BB6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M56,50 L28,78" fill="none" stroke="#EAAA2F" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

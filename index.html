@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Favio Fernández — Product Manager</title>
+  <meta name="description" data-i18n="meta.description"
+    content="Product Manager que diseña el producto que gestiona. 7+ años planificando, coordinando y entregando en sistemas críticos de alcance nacional." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Favio Fernández — Product Manager" />
+  <meta property="og:description" content="Product Manager que diseña el producto que gestiona. De la estrategia al despliegue." />
+  <meta property="og:image" content="assets/img/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ===== NAV ===== -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#hero" class="brand" aria-label="Favio Fernández">
+<svg class="brand__cond" viewBox="257.72 237.71 193.22 193.22" fill="none" aria-hidden="true"><circle class="bc-o" cx="354.33" cy="334.32" r="91.61"/><line class="bc-t" x1="388.79" y1="313.88" x2="355.21" y2="339.44"/><polyline class="bc-t" points="322.51 315.68 354.33 340.13 354.33 377.03"/><circle class="bc-n" cx="311.01" cy="307.63" r="12.32"/><circle class="bc-n" cx="397.65" cy="307.63" r="12.32"/><circle class="bc-n" cx="354.33" cy="384.88" r="12.32"/></svg><span class="brand__txt">favio<span class="brand__accent">fm</span></span>
+      </a>
+      <nav class="nav__links" aria-label="Principal">
+        <a href="#work" data-i18n="nav.work">Trabajo</a>
+        <a href="#about" data-i18n="nav.about">Perfil</a>
+        <a href="#path" data-i18n="nav.experience">Trayectoria</a>
+      </nav>
+      <div class="nav__right">
+        <button class="lang-toggle" id="langToggle" aria-label="Cambiar idioma / Switch language">
+          <span class="lang-toggle__opt is-active" data-lang="es">ES</span>
+          <span class="lang-toggle__sep">|</span>
+          <span class="lang-toggle__opt" data-lang="en">EN</span>
+        </button>
+        <a href="#contact" class="btn btn--pill" data-i18n="nav.cta">Hablemos</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="hero__content hero__top" id="heroContent">
+          <div class="hero__intro">
+            <p class="hero__kick"><span class="hero__dot"></span><span data-i18n="hero.kick">disponible para proyectos</span></p>
+            <h1 class="hero__title">
+              <span class="hero__static">Product</span>
+              <span class="hero__cycle hero__accent" id="heroCycle" data-words="Manager,Designer,Builder,Strategist">Manager</span>
+            </h1>
+            <p class="hero__def" id="heroDef"
+               data-defs-es="convierte la estrategia en producto que se envía|diseña la interfaz y el sistema, no solo el roadmap|lo construye y lo lleva a producción|entiende el negocio, el usuario y el trade-off"
+               data-defs-en="turns strategy into product that ships|designs the interface and system, not just the roadmap|builds it and takes it to production|gets the business, the user and the trade-off">// convierte la estrategia en producto que se envía</p>
+            <div class="hero__cta">
+              <a class="btn btn--primary" href="#work" data-i18n="hero.ctaWork">Ver mi trabajo</a>
+              <a class="btn btn--ghost" href="assets/cv/CV_FavioFernandez.pdf" download data-i18n="hero.ctaCv">Descargar CV</a>
+              <a class="hero__link" href="https://www.linkedin.com/in/favio-fm/" target="_blank" rel="noopener">LinkedIn ↗</a>
+            </div>
+          </div>
+          <div class="hero__viz">
+            <div class="hero__photo hero__photo--cutout">
+              <img src="assets/img/favio-hero.png" alt="Favio Fernández — Product Manager" loading="eager" />
+            </div>
+            <ul class="hero__stats reveal">
+              <li><span class="hero__statn">7+</span><span class="hero__statl" data-i18n="hero.stat1">Años de experiencia</span></li>
+              <li><span class="hero__statn">12+</span><span class="hero__statl" data-i18n="hero.stat2">Productos y proyectos</span></li>
+              <li><span class="hero__statn">−40%</span><span class="hero__statl" data-i18n="hero.stat3">Costo de producto</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SELECTED WORK / CASE STUDIES ===== -->
+    <section class="section" id="work">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__kicker"><span data-i18n="work.kicker">Trabajo seleccionado</span></span>
+          <h2 class="section__title" data-i18n="work.title">Productos y sistemas, <em>de punta a punta</em></h2>
+          <p class="section__sub" data-i18n="work.sub">No lidero desde la distancia: defino el producto, lo diseño y, con el equipo, lo llevo a producción.</p>
+        </header>
+
+        <!-- Case study 01 · confidencial (panel abstracto con condensador) -->
+        <article class="cs reveal">
+          <div class="cs__visual cs__visual--sigma">
+            <img class="cs__shot" src="assets/img/work/sigma-capture.png" alt="Plataforma educativa — vista de producto" loading="lazy" />
+            <svg class="cs__cond" viewBox="257.72 237.71 193.22 193.22" fill="none" aria-hidden="true">
+              <circle class="csc-ring" cx="354.33" cy="334.32" r="91.61" />
+              <line class="csc-tr" x1="388.79" y1="313.88" x2="355.21" y2="339.44" />
+              <polyline class="csc-tr" points="322.51 315.68 354.33 340.13 354.33 377.03" />
+              <circle class="csc-node" cx="311.01" cy="307.63" r="12.32" />
+              <circle class="csc-node" cx="397.65" cy="307.63" r="12.32" />
+              <circle class="csc-node" cx="354.33" cy="384.88" r="12.32" />
+            </svg>
+            <span class="cs__vlabel" data-i18n="cs1.m3">Confidencial · sin capturas</span>
+          </div>
+          <div class="cs__body">
+            <span class="cs__eyebrow" data-i18n="cs1.eyebrow">Case study 01 · producto propio</span>
+            <h3 class="cs__title" data-i18n="cs1.title">Plataforma educativa · ERP escolar multi-sede</h3>
+            <p class="cs__metaline"><span data-i18n="cs1.m1">Rol · PM &amp; Product Designer</span> — <span data-i18n="cs1.m2">En desarrollo</span></p>
+            <p class="cs__sub" data-i18n="cs1.sub">Un ERP para colegios K-12: una sola herramienta para dirección, coordinación, docentes y familias. Definí el producto de punta a punta y lo diseñé.</p>
+            <details class="cs__more">
+              <summary class="cs__more-btn"><span data-i18n="cs.more">Ver caso completo</span></summary>
+            <div class="cs__facts">
+              <div class="cs__fact">
+                <h4 data-i18n="cs.problem">El problema</h4>
+                <p data-i18n="cs1.problem">Colegios ahogados en trabajo administrativo, con herramientas fragmentadas —Excel, WhatsApp, papel—. Los docentes gastan en trámites el tiempo que deberían dar a enseñar; las familias, a ciegas.</p>
+              </div>
+              <div class="cs__fact">
+                <h4 data-i18n="cs.role">Mi rol</h4>
+                <ul>
+                  <li data-i18n="cs1.r1">Definí visión, alcance y roadmap del producto.</li>
+                  <li data-i18n="cs1.r2">Diseñé la arquitectura de 5 roles y los flujos UX.</li>
+                  <li data-i18n="cs1.r3">Construí la identidad y el sistema de diseño.</li>
+                  <li data-i18n="cs1.r4">Coordino al equipo y las decisiones con stakeholders.</li>
+                </ul>
+              </div>
+              <div class="cs__fact">
+                <h4 data-i18n="cs.decisions">Decisiones de producto</h4>
+                <ul>
+                  <li data-i18n="cs1.d1">Multi-tenant: una instancia por sede, misma base.</li>
+                  <li data-i18n="cs1.d2">UX «for dummies»: pocas decisiones, acción primero.</li>
+                  <li data-i18n="cs1.d3">Degradar honesto: nunca datos inventados en pantalla.</li>
+                  <li data-i18n="cs1.d4">Norte: «menos administración, más educación».</li>
+                </ul>
+              </div>
+              <div class="cs__fact">
+                <h4 data-i18n="cs.challenge">El reto</h4>
+                <p data-i18n="cs1.challenge">Cinco tipos de usuario con necesidades opuestas en un mismo sistema, en un contexto de cero tolerancia al error —notas, pagos, datos de menores—. Priorizar sin romper a nadie.</p>
+              </div>
+            </div>
+            </details>
+            <ul class="cs__chips">
+              <li data-i18n="cs1.c1">En desarrollo · piloto</li>
+              <li data-i18n="cs1.c2">5 roles → 1 producto</li>
+              <li data-i18n="cs1.c3">Multi-sede</li>
+              <li data-i18n="cs1.c4">PM + diseño, de una mano</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Case study 02 · Glik (fintech de movilidad) -->
+        <article class="cs cs--flip reveal">
+          <div class="cs__visual cs__visual--sigma">
+            <svg class="cs__arch" viewBox="0 0 220 262" fill="none" aria-hidden="true">
+              <g class="arch-line">
+                <path d="M45 68 L110 122" /><path d="M110 68 L110 122" /><path d="M175 68 L110 122" />
+                <path d="M110 160 L45 210" /><path d="M110 160 L110 210" /><path d="M110 160 L175 210" />
+              </g>
+              <g class="arch-chip">
+                <rect x="18" y="38" width="54" height="30" rx="8" /><text x="45" y="54">App</text>
+                <rect x="83" y="38" width="54" height="30" rx="8" /><text x="110" y="54">Web</text>
+                <rect x="148" y="38" width="54" height="30" rx="8" /><text x="175" y="54">POS</text>
+              </g>
+              <rect class="arch-bff" x="72" y="122" width="76" height="38" rx="11" /><text class="arch-bfft" x="110" y="142">BFF</text>
+              <g class="arch-chip">
+                <rect x="18" y="210" width="54" height="30" rx="8" /><text x="45" y="226">ERP</text>
+                <rect x="83" y="210" width="54" height="30" rx="8" /><text x="110" y="226">OCR</text>
+                <rect x="148" y="210" width="54" height="30" rx="8" /><text x="175" y="226">Auth</text>
+              </g>
+            </svg>
+            <span class="cs__vlabel" data-i18n="cs3.vlabel">Ecosistema · un solo backend</span>
+          </div>
+          <div class="cs__body">
+            <span class="cs__eyebrow" data-i18n="cs3.eyebrow">Case study 02 · fintech de movilidad</span>
+            <h3 class="cs__title" data-i18n="cs3.title">Glik · Arquitectura de un ecosistema de arrendamiento</h3>
+            <p class="cs__metaline"><span data-i18n="cs3.m1">Rol · Lead Architect &amp; PM</span> — <span data-i18n="cs3.m2">Mar – May 2026</span></p>
+            <p class="cs__sub" data-i18n="cs3.sub">Fintech de arrendamiento de movilidad (motos, con visión LatAm). Diseñé el ecosistema tecnológico completo: la estrategia de arquitectura y el producto.</p>
+            <details class="cs__more">
+              <summary class="cs__more-btn"><span data-i18n="cs.more">Ver caso completo</span></summary>
+              <div class="cs__facts">
+                <div class="cs__fact">
+                  <h4 data-i18n="cs.problem">El problema</h4>
+                  <p data-i18n="cs3.problem">El negocio pivotó de tienda propia a concesionarios aliados. La arquitectura heredada —una sucesión de landings— no sostenía el nuevo modelo: multi-dispositivo, con vendedores externos y cero tolerancia al fraude.</p>
+                </div>
+                <div class="cs__fact">
+                  <h4 data-i18n="cs.role">Mi rol</h4>
+                  <ul>
+                    <li data-i18n="cs3.r1">Lead Architect + PM: decisiones técnicas y de producto.</li>
+                    <li data-i18n="cs3.r2">Impact analysis del cambio de alcance.</li>
+                    <li data-i18n="cs3.r3">Roadmap por fases (MVP → ecosistema).</li>
+                    <li data-i18n="cs3.r4">Coordinación del equipo (Flutter, backend, QA).</li>
+                  </ul>
+                </div>
+                <div class="cs__fact">
+                  <h4 data-i18n="cs.decisions">Decisiones de arquitectura</h4>
+                  <ul>
+                    <li data-i18n="cs3.d1">Un BFF (backend-for-frontend) como capa única.</li>
+                    <li data-i18n="cs3.d2">App Flutter + PWA + POS sobre el mismo backend.</li>
+                    <li data-i18n="cs3.d3">Reusar lo pagado del proveedor vía APIs headless.</li>
+                    <li data-i18n="cs3.d4">Nativo donde importa: anti-fraude, sesiones, eKYC.</li>
+                  </ul>
+                </div>
+                <div class="cs__fact">
+                  <h4 data-i18n="cs3.impact">El impacto</h4>
+                  <p data-i18n="cs3.impacttext">Bajé el costo ~40% (~$50k → ~$30k) y dejé una base extensible a nuevos verticales (carros, e-bikes) y a otro país — sin tirar el trabajo previo.</p>
+                </div>
+              </div>
+            </details>
+            <ul class="cs__chips">
+              <li data-i18n="cs3.c1">Lead Architect + PM</li>
+              <li data-i18n="cs3.c2">Ecosistema multi-canal</li>
+              <li data-i18n="cs3.c3">BFF · headless</li>
+              <li data-i18n="cs3.c4">−40% de costo</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Case study 03 · MedicPC (imagen real) -->
+        <article class="cs reveal">
+          <div class="cs__visual">
+            <img src="assets/img/field/board-1.jpg" alt="Tablero de fuerza y control — MedicPC" loading="lazy" />
+            <span class="cs__vlabel" data-i18n="cs2.vlabel">MedicPC · trabajo de campo</span>
+          </div>
+          <div class="cs__body">
+            <span class="cs__eyebrow" data-i18n="cs2.eyebrow">Case study 03 · empresa fundada</span>
+            <h3 class="cs__title" data-i18n="cs2.title">MedicPC · Automatización y control de líneas industriales</h3>
+            <p class="cs__metaline"><span data-i18n="cs2.m1">Rol · Fundador / Director de proyectos</span> — <span data-i18n="cs2.m2">+ Diseño de marca</span> · <span data-i18n="cs2.m3">2017 – 2024</span></p>
+            <p class="cs__sub" data-i18n="cs2.sub">Servicios de ingeniería electrónica: tableros de fuerza y control, sistemas embebidos y cableado para plantas industriales. Fundé la empresa, dirigí los proyectos y diseñé la marca.</p>
+            <details class="cs__more">
+              <summary class="cs__more-btn"><span data-i18n="cs.more">Ver caso completo</span></summary>
+            <div class="cs__facts">
+              <div class="cs__fact">
+                <h4 data-i18n="cs.problem">El problema</h4>
+                <p data-i18n="cs2.problem">Proyectos técnicos complejos, con muchos recursos y sin plan, que terminan en retrasos y sobrecostos —y líneas de producción paradas.</p>
+              </div>
+              <div class="cs__fact">
+                <h4 data-i18n="cs.role">Mi rol</h4>
+                <ul>
+                  <li data-i18n="cs2.r1">Organizaba el plan y las tareas: planes de trabajo y cronograma.</li>
+                  <li data-i18n="cs2.r2">Coordinaba un equipo multidisciplinario y los recursos.</li>
+                  <li data-i18n="cs2.r3">Medía resultados y rescataba proyectos que venían fallando.</li>
+                  <li data-i18n="cs2.r4">Diseñé toda la identidad: logo, brochures y sistema visual.</li>
+                </ul>
+              </div>
+              <div class="cs__fact">
+                <h4 data-i18n="cs2.scope">Alcance</h4>
+                <ul>
+                  <li data-i18n="cs2.s1">Inyección de plástico, metalmecánica CNC, agricultura.</li>
+                  <li data-i18n="cs2.s2">Tableros de fuerza y control · sistemas embebidos.</li>
+                  <li data-i18n="cs2.s3">Clientes industriales: Siemens, Industrias Taime, Phase II.</li>
+                  <li data-i18n="cs2.s4">Cableado estructurado, planos e informes de obra.</li>
+                </ul>
+              </div>
+              <div class="cs__fact">
+                <h4 data-i18n="cs2.thread">El hilo con hoy</h4>
+                <p data-i18n="cs2.thread.text">Cambió la industria —de líneas industriales a un ERP educativo— pero el rol no: planificar, coordinar y entregar. El mismo método de producto, otro dominio.</p>
+              </div>
+            </div>
+            </details>
+            <ul class="cs__chips">
+              <li data-i18n="cs2.c1">7 años al frente</li>
+              <li data-i18n="cs2.c2">Clientes industriales</li>
+              <li data-i18n="cs2.c3">Rescate de proyectos</li>
+              <li data-i18n="cs2.c4">Marca diseñada 100% por mí</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===== PERFIL / HILO CONDUCTOR ===== -->
+    <section class="section section--alt" id="about">
+      <div class="container about__grid">
+        <div class="about__photo reveal">
+          <img src="assets/img/favio.jpg" alt="Favio Fernández" loading="lazy" />
+        </div>
+        <div class="about__body reveal" data-delay="1">
+          <span class="section__kicker"><span data-i18n="about.kicker">Perfil</span></span>
+          <h2 class="section__title" data-i18n="about.title">Un mismo método, <em>distintos dominios</em></h2>
+          <p class="about__text" data-i18n="about.p1">
+            Dicen que tengo experiencia en muchas áreas. La verdad es más simple: llevo 7 años
+            haciendo lo mismo —planificar, coordinar y entregar producto— en dominios distintos.
+          </p>
+          <p class="about__text" data-i18n="about.p2">
+            De la automatización de líneas industriales a un ERP educativo, el rol no cambió:
+            entiendo el problema, defino el alcance, coordino al equipo y llevo la solución a
+            producción. Y a diferencia de la mayoría de PM, la diseño yo mismo.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== INAC · Infraestructura crítica ===== -->
+    <section class="section" id="inac">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__kicker"><span data-i18n="inac.kicker">Infraestructura crítica</span></span>
+          <h2 class="section__title" data-i18n="inac.title">INAC · lideré la infraestructura de <em>27 aeropuertos</em></h2>
+          <p class="section__sub" data-i18n="inac.sub">Líder de Infraestructura Tecnológica: operación crítica 24/7, control de tráfico aéreo (ATC) y 181 dispositivos de red — de alcance nacional (2025–2026).</p>
+        </header>
+        <div class="kpis reveal">
+          <ul class="kpis__row" aria-label="Métricas clave">
+            <li><span class="kpis__n" data-count="36">0</span><span class="kpis__l" data-i18n="metric.sites">sedes coordinadas</span></li>
+            <li><span class="kpis__n" data-count="15" data-suffix=" min">0</span><span class="kpis__l" data-i18n="metric.mttr">MTTR promedio</span></li>
+            <li><span class="kpis__n" data-count="30" data-prefix="~" data-suffix=" %">0</span><span class="kpis__l" data-i18n="metric.savings">ahorro presupuestario</span></li>
+            <li><span class="kpis__n">4.4/5</span><span class="kpis__l" data-i18n="metric.sat">satisfacción · mesa de servicio</span></li>
+          </ul>
+        </div>
+        <div class="field field--2 reveal" data-delay="1">
+          <div class="field__grid">
+            <div class="field__item field__item--tall" data-full="assets/img/work/inac-enlace.jpg" data-cap="INAC — instalación de enlace de radio (Maracaibo)">
+              <img src="assets/img/work/inac-enlace.jpg" alt="INAC — enlace de radio" loading="lazy" />
+            </div>
+            <div class="field__item field__item--tall" data-full="assets/img/work/inac-datacenter.jpg" data-cap="INAC — centro de datos / racks">
+              <img src="assets/img/work/inac-datacenter.jpg" alt="INAC — centro de datos" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TRAYECTORIA ===== -->
+    <section class="section" id="path">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__kicker"><span data-i18n="exp.kicker">Trayectoria</span></span>
+          <h2 class="section__title" data-i18n="exp.title">Siete años <em>construyendo y entregando</em></h2>
+        </header>
+        <ol class="tl">
+          <li class="tl__row reveal">
+            <div class="tl__when"><span class="tl__date" data-i18n="exp.now.date">Actualidad</span></div>
+            <div class="tl__card">
+              <h3 class="tl__role" data-i18n="exp.now.role">Product Manager · Diseño de producto</h3>
+              <p class="tl__org" data-i18n="exp.now.org">Independiente</p>
+              <ul class="tl__list">
+                <li data-i18n="exp.now.b1">Gestión de producto y proyectos, de la estrategia al despliegue.</li>
+                <li data-i18n="exp.now.b2">Diseño UX/UI y concepto de producto.</li>
+                <li data-i18n="exp.now.b3">Disponible para Venezuela, Colombia y remoto.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="tl__row reveal">
+            <div class="tl__when"><span class="tl__date">2026</span></div>
+            <div class="tl__card">
+              <h3 class="tl__role" data-i18n="exp.glik.role">Lead Architect / Product Manager</h3>
+              <p class="tl__org">Glik — Fintech de movilidad</p>
+              <ul class="tl__list">
+                <li data-i18n="exp.glik.b1">Arquitectura del ecosistema: App Flutter + PWA + POS sobre un BFF.</li>
+                <li data-i18n="exp.glik.b2">Impact analysis, roadmap por fases y decisiones técnicas.</li>
+                <li data-i18n="exp.glik.b3">Rediseño que bajó ~40% el costo del proyecto.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="tl__row reveal">
+            <div class="tl__when"><span class="tl__date">2025 – 2026</span></div>
+            <div class="tl__card">
+              <h3 class="tl__role" data-i18n="exp.inac.role">Líder de Proyectos de Infraestructura Tecnológica</h3>
+              <p class="tl__org">Instituto Nacional de Aeronáutica Civil (INAC)</p>
+              <ul class="tl__list">
+                <li data-i18n="exp.inac.b1">Operación crítica en 27 aeropuertos y 36 sedes.</li>
+                <li data-i18n="exp.inac.b2">OpenProject (Kanban) + GLPI (ITSM) · MTTR de 15 min.</li>
+                <li data-i18n="exp.inac.b3">Equipos de ~29 personas: alcance, cronogramas y dependencias.</li>
+                <li data-i18n="exp.inac.b4">~30 % de optimización presupuestaria sin afectar la continuidad.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="tl__row reveal">
+            <div class="tl__when"><span class="tl__date">2024 – 2025</span></div>
+            <div class="tl__card">
+              <h3 class="tl__role" data-i18n="exp.multi.role">Coordinador de Proyectos Digitales / Owner Técnico</h3>
+              <p class="tl__org">Grupo Multiromanas</p>
+              <ul class="tl__list">
+                <li data-i18n="exp.multi.b1">Diseño y despliegue de sitios web corporativos (WordPress).</li>
+                <li data-i18n="exp.multi.b2">Arquitectura técnica y coordinación de entregables con clientes.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="tl__row reveal">
+            <div class="tl__when"><span class="tl__date">2017 – 2024</span></div>
+            <div class="tl__card">
+              <h3 class="tl__role" data-i18n="exp.medic.role">Fundador / Director de Proyectos</h3>
+              <p class="tl__org">MedicPC — Servicios de ingeniería</p>
+              <ul class="tl__list">
+                <li data-i18n="exp.medic.b1">Empresa propia: automatización y control de líneas industriales.</li>
+                <li data-i18n="exp.medic.b2">Gestión de plan, recursos, proveedores y equipos técnicos.</li>
+                <li data-i18n="exp.medic.b3">Diseñé la identidad de marca (el logo del condensador de flujos).</li>
+              </ul>
+            </div>
+          </li>
+          <li class="tl__row reveal">
+            <div class="tl__when"><span class="tl__date">2018 – 2023</span></div>
+            <div class="tl__card">
+              <h3 class="tl__role" data-i18n="exp.unetrans.role">Profesor Universitario de Electrónica</h3>
+              <p class="tl__org">UNETRANS — Universidad Nacional Experimental del Transporte</p>
+              <ul class="tl__list">
+                <li data-i18n="exp.unetrans.b1">Profesor de Electrónica durante 5 años.</li>
+                <li data-i18n="exp.unetrans.b2">Asignaturas técnicas, laboratorio y tutoría de proyectos.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== DISEÑO (evidencia del diferenciador) ===== -->
+    <section class="section section--alt" id="design">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__kicker"><span data-i18n="design.kicker">Productos y proyectos</span></span>
+          <h2 class="section__title" data-i18n="design.title">No solo lo gestiono. <em>Lo construyo.</em></h2>
+          <p class="section__sub" data-i18n="design.sub">Productos reales que llevé del problema al despliegue — y su diseño.</p>
+        </header>
+        <article class="webcard reveal">
+          <div class="webcard__frame">
+            <div class="webcard__bar">
+              <span class="webcard__dots"><i></i><i></i><i></i></span>
+              <span class="webcard__url">summa · plataforma educativa</span>
+            </div>
+            <div class="webcard__view"><iframe src="assets/embed/summa/index.html" title="SUMMA — landing de la plataforma" loading="lazy"></iframe></div>
+          </div>
+          <div class="webcard__info">
+            <span class="webcard__tag">EdTech · SaaS</span>
+            <h3 class="webcard__title">SUMMA · Landing de la plataforma</h3>
+            <p class="webcard__desc" data-i18n="webcard.summa.desc">Diseñé la landing de punta a punta —mensaje, estructura, sistema visual y copy—: la puerta de entrada al producto. Desliza para recorrerla.</p>
+            <div class="webcard__roles">
+              <span class="webcard__role" data-i18n="webcard.r.pm">Product Manager</span>
+              <span class="webcard__role" data-i18n="webcard.r.des">Diseño de producto</span>
+              <span class="webcard__role">Frontend</span>
+              <span class="webcard__role">Copywriting</span>
+            </div>
+          </div>
+        </article>
+        <!-- Aura -->
+        <article class="appcard reveal">
+          <div class="appcard__visual">
+            <div class="phone"><div class="phone__scr"><img src="assets/img/work/aura-1.png" alt="Aura — inicio" loading="lazy" /></div></div>
+            <div class="phone"><div class="phone__scr"><img src="assets/img/work/aura-2.png" alt="Aura — metas de ahorro" loading="lazy" /></div></div>
+          </div>
+          <div class="webcard__info">
+            <span class="webcard__tag" data-i18n="app.aura.tag">App · Fintech</span>
+            <h3 class="webcard__title">Aura · Finanzas personales</h3>
+            <p class="webcard__desc" data-i18n="app.aura.desc">App de finanzas personales —saldo, metas de ahorro y movimientos. Versión de producción en curso para el mismo cliente que SUMMA; cubro el mismo rol: producto + diseño.</p>
+            <div class="webcard__roles">
+              <span class="webcard__role" data-i18n="webcard.r.pm">Product Manager</span>
+              <span class="webcard__role" data-i18n="webcard.r.des">Diseño de producto</span>
+              <span class="webcard__role" data-i18n="app.badge.dev">En desarrollo</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Grúas -->
+        <article class="appcard appcard--flip reveal">
+          <div class="appcard__visual">
+            <div class="phone"><div class="phone__scr"><img src="assets/img/work/grua-1.png" alt="Grúas — solicitar asistencia" loading="lazy" /></div></div>
+            <div class="phone"><div class="phone__scr"><img src="assets/img/work/grua-2.png" alt="Grúas — inicio de sesión" loading="lazy" /></div></div>
+          </div>
+          <div class="webcard__info">
+            <span class="webcard__tag" data-i18n="app.grua.tag">App · Asistencia vial</span>
+            <h3 class="webcard__title">Sistema de Grúas</h3>
+            <p class="webcard__desc" data-i18n="app.grua.desc">App de asistencia vial y traslado de grúas para un taller mecánico: ubicación en vivo y solicitud de asistencia. Desarrollé el MVP y la beta; hoy está en producción.</p>
+            <div class="webcard__roles">
+              <span class="webcard__role" data-i18n="webcard.r.pm">Product Manager</span>
+              <span class="webcard__role" data-i18n="app.grua.role">MVP + Beta</span>
+              <span class="webcard__role" data-i18n="app.badge.prod">En producción</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Kaboom -->
+        <article class="appcard reveal">
+          <div class="appcard__visual">
+            <div class="laptop">
+              <div class="laptop__screen" data-full="assets/img/work/kaboom-art.png" data-cap="Project Kaboom — juego NFT (dirección de arte + UI)">
+                <img src="assets/img/work/kaboom-art.png" alt="Project Kaboom — arte del juego" loading="lazy" />
+              </div>
+              <div class="laptop__base"></div>
+            </div>
+          </div>
+          <div class="webcard__info">
+            <span class="webcard__tag" data-i18n="app.kaboom.tag">Producto · NFT</span>
+            <h3 class="webcard__title">Project Kaboom</h3>
+            <p class="webcard__desc" data-i18n="app.kaboom.desc">Un juego NFT que llevé del concepto de producto al diseño de interfaz — y con el que fui parte del equipo que levantó capital semilla. Producto y fundraising, no solo arte.</p>
+            <div class="webcard__roles">
+              <span class="webcard__role" data-i18n="app.kaboom.r1">Concepto de producto</span>
+              <span class="webcard__role" data-i18n="app.kaboom.r2">Capital semilla</span>
+              <span class="webcard__role" data-i18n="app.kaboom.r3">Dirección de arte + UI</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- SpaceTech (web enviada) -->
+        <article class="webcard reveal">
+          <div class="webcard__frame">
+            <div class="webcard__bar">
+              <span class="webcard__dots"><i></i><i></i><i></i></span>
+              <span class="webcard__url">spacetech.com.ve</span>
+            </div>
+            <div class="webcard__view webcard__view--img"><img src="assets/img/work/spacetech-full.png" alt="SpaceTech — sitio corporativo" loading="lazy" /></div>
+          </div>
+          <div class="webcard__info">
+            <span class="webcard__tag" data-i18n="st.tag">Web · Diseño + Desarrollo</span>
+            <h3 class="webcard__title">SpaceTech · Sitio corporativo</h3>
+            <p class="webcard__desc" data-i18n="st.desc">Diseñé y desarrollé el sitio de una empresa de infraestructura, ciberseguridad y automatización — de la estructura y el copy al front. Enviado y en vivo. Desliza para recorrerlo.</p>
+            <div class="webcard__roles">
+              <span class="webcard__role" data-i18n="webcard.r.des">Diseño de producto</span>
+              <span class="webcard__role">Frontend</span>
+              <a class="webcard__role webcard__role--link" href="https://spacetech.com.ve/" target="_blank" rel="noopener" data-i18n="st.visit">Visitar sitio ↗</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== CAPACIDADES ===== -->
+    <section class="section" id="stack">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__kicker"><span data-i18n="stack.kicker">Capacidades</span></span>
+          <h2 class="section__title" data-i18n="stack.title">Herramientas y <em>competencias</em></h2>
+        </header>
+        <div class="stack">
+          <div class="stack__group reveal">
+            <h3 class="stack__label" data-i18n="stack.g1">Gestión &amp; producto</h3>
+            <ul class="stack__list">
+              <li class="stack__item"><span class="stack__name" data-i18n="stack.pm.n">Gestión de proyectos</span><span class="stack__ctx" data-i18n="stack.pm.c">Planificación, riesgos, cronograma y stakeholders.</span></li>
+              <li class="stack__item"><span class="stack__name" data-i18n="stack.disc.n">Product discovery</span><span class="stack__ctx" data-i18n="stack.disc.c">Del problema y el negocio a la solución correcta.</span></li>
+              <li class="stack__item"><span class="stack__name">ITSM · GLPI</span><span class="stack__ctx" data-i18n="stack.itsm.c">Mesa de servicio, incidentes y MTTR.</span></li>
+              <li class="stack__item"><span class="stack__name">OpenProject</span><span class="stack__ctx" data-i18n="stack.op.c">Tableros Kanban y seguimiento de entregables.</span></li>
+            </ul>
+          </div>
+          <div class="stack__group reveal" data-delay="1">
+            <h3 class="stack__label" data-i18n="stack.g2">Diseño</h3>
+            <ul class="stack__list">
+              <li class="stack__item"><span class="stack__name">UX/UI</span><span class="stack__ctx" data-i18n="stack.ux.c">Flujos, wireframes e interfaces de producto.</span></li>
+              <li class="stack__item"><span class="stack__name" data-i18n="stack.brand.n">Branding</span><span class="stack__ctx" data-i18n="stack.brand.c">Identidad, logotipos y sistema visual.</span></li>
+              <li class="stack__item"><span class="stack__name">Figma</span><span class="stack__ctx" data-i18n="stack.figma.c">Diseño y prototipado de interfaces.</span></li>
+              <li class="stack__item"><span class="stack__name">Illustrator</span><span class="stack__ctx" data-i18n="stack.ai.c">Vectorial, marca y piezas gráficas.</span></li>
+            </ul>
+          </div>
+          <div class="stack__group reveal" data-delay="2">
+            <h3 class="stack__label" data-i18n="stack.g3">Tecnología &amp; IA</h3>
+            <ul class="stack__list">
+              <li class="stack__item"><span class="stack__name" data-i18n="stack.agents.n">Agentes de IA</span><span class="stack__ctx" data-i18n="stack.agents.c">Manejo y creación: orquestación, herramientas y automatización.</span></li>
+              <li class="stack__item"><span class="stack__name">n8n</span><span class="stack__ctx" data-i18n="stack.n8n.c">Automatización de procesos operativos.</span></li>
+              <li class="stack__item"><span class="stack__name">WordPress</span><span class="stack__ctx" data-i18n="stack.wp.c">Sitios corporativos de punta a punta.</span></li>
+              <li class="stack__item"><span class="stack__name">JavaScript</span><span class="stack__ctx" data-i18n="stack.js.c">Web y prototipos interactivos.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FORMACIÓN & CERTIFICACIONES ===== -->
+    <section class="section section--alt" id="certs">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__kicker"><span data-i18n="certs.kicker">Formación &amp; certificaciones</span></span>
+          <h2 class="section__title" data-i18n="certs.title">Aprendizaje <em>continuo</em></h2>
+          <p class="section__sub" data-i18n="certs.sub">Base de ingeniería, más formación en producto, growth y desarrollo.</p>
+        </header>
+        <div class="certs">
+          <div class="cert reveal" data-full="assets/img/certs/gestion-proyectos-agile.png" data-cap="Gestión de Proyectos y Fundamentos de metodología Agile — Santander Open Academy (2026)">
+            <img src="assets/img/certs/gestion-proyectos-agile.png" alt="Certificado Gestión de Proyectos y Fundamentos de Agile — Santander Open Academy" loading="lazy" />
+            <div class="cert__meta"><span class="cert__tag">Santander Open Academy · 2026</span><span class="cert__name">Gestión de Proyectos y Agile</span></div>
+          </div>
+          <div class="cert reveal" data-delay="1" data-full="assets/img/certs/growth-marketing.png" data-cap="Growth Marketing — Coderhouse (2024)">
+            <img src="assets/img/certs/growth-marketing.png" alt="Certificado Growth Marketing — Coderhouse" loading="lazy" />
+            <div class="cert__meta"><span class="cert__tag">Coderhouse · 2024</span><span class="cert__name">Growth Marketing</span></div>
+          </div>
+          <div class="cert reveal" data-delay="2" data-full="assets/img/certs/community-manager.png" data-cap="Community Manager & Publicidad — Coderhouse (2024)">
+            <img src="assets/img/certs/community-manager.png" alt="Certificado Community Manager & Publicidad — Coderhouse" loading="lazy" />
+            <div class="cert__meta"><span class="cert__tag">Coderhouse · 2024</span><span class="cert__name">Community Manager &amp; Publicidad</span></div>
+          </div>
+          <div class="cert reveal" data-delay="3" data-full="assets/img/certs/javascript.png" data-cap="JavaScript — Coderhouse (2023)">
+            <img src="assets/img/certs/javascript.png" alt="Certificado JavaScript — Coderhouse" loading="lazy" />
+            <div class="cert__meta"><span class="cert__tag">Coderhouse · 2023</span><span class="cert__name">JavaScript</span></div>
+          </div>
+        </div>
+        <div class="edu reveal">
+          <h3 class="stack__label" data-i18n="edu.label">Formación académica</h3>
+          <ul class="edu__list">
+            <li><strong data-i18n="edu.masters">Maestría en Ingeniería Eléctrica y Electrónica</strong> — Universidad Simón Bolívar</li>
+            <li><strong data-i18n="edu.degree">Ingeniería Electrónica</strong> — IUT Dr. Federico Rivero Palacios</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MÁS ALLÁ DEL ROL ===== -->
+    <section class="section section--alt" id="extra">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__kicker"><span data-i18n="extra.kicker">Más allá del rol</span></span>
+          <h2 class="section__title" data-i18n="extra.title">Curiosidad que <em>suma al equipo</em></h2>
+        </header>
+        <div class="extra">
+          <article class="extra__card reveal">
+            <span class="extra__tag" data-i18n="extra.talk.tag">Conferencia</span>
+            <h3 class="extra__title" data-i18n="extra.talk.title">«Ingeniería con Actitud»</h3>
+            <p class="extra__text" data-i18n="extra.talk.text">Una charla sobre cómo la actitud, la curiosidad y la visión transforman al ingeniero en alguien que crea, lidera y genera impacto — más allá del título.</p>
+          </article>
+          <article class="extra__card reveal" data-delay="1">
+            <h3 class="extra__title" data-i18n="extra.teach.title">Docencia universitaria</h3>
+            <p class="extra__text" data-i18n="extra.teach.text">5 años como profesor de Electrónica en UNETRANS: asignaturas técnicas, laboratorio y tutoría de proyectos.</p>
+          </article>
+          <article class="extra__card reveal" data-delay="2">
+            <h3 class="extra__title" data-i18n="extra.voice.title">Locución</h3>
+            <p class="extra__text" data-i18n="extra.voice.text">Voz para radio, institucional y comercial. Experiencia en radio («Despierta con Mía») y micros corporativos.</p>
+          </article>
+          <article class="extra__card reveal" data-delay="3">
+            <h3 class="extra__title" data-i18n="extra.ai.title">Agentes de IA</h3>
+            <p class="extra__text" data-i18n="extra.ai.text">Manejo y creación de agentes de IA: orquestación, herramientas, automatización y flujos con LLMs.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== STATEMENT (momento oscuro) ===== -->
+    <section class="statement dark" id="statement">
+      <div class="container">
+        <div class="statement__head">
+          <span class="statement__seal" aria-hidden="true">
+            <svg viewBox="257.72 237.71 193.22 193.22" fill="none"><circle class="ss-o" cx="354.33" cy="334.32" r="91.61"/><line class="ss-t" x1="388.79" y1="313.88" x2="355.21" y2="339.44"/><polyline class="ss-t" points="322.51 315.68 354.33 340.13 354.33 377.03"/><circle class="ss-n" cx="311.01" cy="307.63" r="12.32"/><circle class="ss-n" cx="397.65" cy="307.63" r="12.32"/><circle class="ss-n" cx="354.33" cy="384.88" r="12.32"/></svg>
+          </span>
+          <p class="statement__pre" data-i18n="statement.pre">// el puente</p>
+          <h2 class="statement__title" data-i18n="statement.title">Conecto <em>producto, diseño e ingeniería.</em></h2>
+          <p class="statement__sub" data-i18n="statement.sub">El producto sale cuando las tres hablan el mismo idioma — y lidero al equipo para que así sea.</p>
+        </div>
+        <div class="statement__cards">
+          <article class="disc-card">
+            <span class="disc-card__ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="1.4" fill="currentColor"/></svg>
+            </span>
+            <h3 class="disc-card__t" data-i18n="node.negocio">Producto</h3>
+            <p class="disc-card__d" data-i18n="disc.prod.d">Con el equipo defino el problema y priorizo con RICE lo que mueve la aguja.</p>
+          </article>
+          <article class="disc-card">
+            <span class="disc-card__ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 20l4.5-1 9-9a2.1 2.1 0 0 0-3-3l-9 9L4 20z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M14 6l4 4" stroke="currentColor" stroke-width="1.6"/></svg>
+            </span>
+            <h3 class="disc-card__t" data-i18n="node.diseno">Diseño</h3>
+            <p class="disc-card__d" data-i18n="disc.dis.d">Diseño flujos e interfaces desde el usuario — story maps y mapas de empatía.</p>
+          </article>
+          <article class="disc-card">
+            <span class="disc-card__ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M8.5 8L4.5 12l4 4M15.5 8l4 4-4 4M13 5l-2 14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <h3 class="disc-card__t" data-i18n="node.ing">Ingeniería</h3>
+            <p class="disc-card__d" data-i18n="disc.ing.d">Lo llevamos a producción y medimos lo que importa: A/B testing y métricas HEART.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACTO ===== -->
+    <section class="section" id="contact">
+      <div class="container contact__grid">
+        <div class="reveal">
+          <span class="section__kicker"><span data-i18n="contact.kicker">Contacto</span></span>
+          <h2 class="section__title" data-i18n="contact.title">Hablemos de tu próximo producto</h2>
+          <p class="contact__lead" data-i18n="contact.lead">¿Un producto que construir, un equipo que liderar o una marca que diseñar? Escríbeme.</p>
+          <a class="proof-pill" href="https://www.linkedin.com/in/favio-fm/details/recommendations/" target="_blank" rel="noopener">
+            <span class="proof-pill__star">★</span><span data-i18n="proof.text">Recomendaciones verificadas en LinkedIn</span><span class="proof-pill__arrow">↗</span>
+          </a>
+          <ul class="contact__links">
+            <li><a href="mailto:favio.afm@gmail.com">favio.afm@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/favio-fm/" target="_blank" rel="noopener">linkedin.com/in/favio-fm</a></li>
+          </ul>
+          <p class="contact__cvlabel" data-i18n="contact.cv">Descargar CV:</p>
+          <ul class="contact__links contact__links--cv">
+            <li><a href="assets/cv/CV_FavioFernandez.pdf" download data-i18n="cv.download">Descargar CV (PDF)</a></li>
+          </ul>
+        </div>
+        <form class="form reveal" data-delay="1" action="https://formspree.io/f/TU_ID_FORMSPREE" method="POST">
+          <label class="form__field">
+            <span data-i18n="form.name">Nombre</span>
+            <input type="text" name="name" required data-i18n-placeholder="form.namePh" placeholder="Tu nombre" />
+          </label>
+          <label class="form__field">
+            <span data-i18n="form.email">Correo</span>
+            <input type="email" name="email" required data-i18n-placeholder="form.emailPh" placeholder="tucorreo@ejemplo.com" />
+          </label>
+          <label class="form__field">
+            <span data-i18n="form.message">Mensaje</span>
+            <textarea name="message" rows="4" required data-i18n-placeholder="form.messagePh" placeholder="Cuéntame brevemente…"></textarea>
+          </label>
+          <button type="submit" class="btn btn--primary" data-i18n="form.submit">Enviar mensaje</button>
+          <p class="form__note" data-i18n="form.note">Nota: el formulario se activa al configurar Formspree.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="brand"><svg class="brand__cond" viewBox="257.72 237.71 193.22 193.22" fill="none" aria-hidden="true"><circle class="bc-o" cx="354.33" cy="334.32" r="91.61"/><line class="bc-t" x1="388.79" y1="313.88" x2="355.21" y2="339.44"/><polyline class="bc-t" points="322.51 315.68 354.33 340.13 354.33 377.03"/><circle class="bc-n" cx="311.01" cy="307.63" r="12.32"/><circle class="bc-n" cx="397.65" cy="307.63" r="12.32"/><circle class="bc-n" cx="354.33" cy="384.88" r="12.32"/></svg><span class="brand__txt">favio<span class="brand__accent">fm</span></span></span>
+      <p class="footer__copy">© <span id="year">2026</span> Favio Fernández. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
+    </div>
+  </footer>
+
+  <!-- ===== LIGHTBOX ===== -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox__close" id="lightboxClose" aria-label="Cerrar">×</button>
+    <img class="lightbox__img" id="lightboxImg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" />
+    <p class="lightbox__cap" id="lightboxCap"></p>
+  </div>
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
