@@ -125,17 +125,22 @@ ul { list-style: none; }
 .hero__dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px var(--accent-tint); }
 .hero__title { font-family: var(--font-display); font-weight: 600; letter-spacing: -.045em; font-size: clamp(46px, 8.5vw, 96px); line-height: .94; color: var(--text); }
 .hero__static { display: block; }
-.hero__cycleline { display: flex; align-items: center; gap: .3em; }
-.hero__cycle { display: block; color: var(--accent-ink); font-weight: 700; transition: opacity .3s var(--ease), transform .3s var(--ease); }
-.hero__cycle.is-swapping { opacity: 0; transform: translateY(-14px); }
+.hero__cycleline { display: inline-flex; align-items: baseline; gap: .1em; }
+.hero__cycle { display: inline-block; overflow: hidden; vertical-align: bottom; padding-bottom: .04em; color: var(--accent-ink); font-weight: 700; }
+.hero__cycle-inner { display: inline-block; will-change: transform; transition: transform .42s var(--ease); }
+.hero__cycle-inner.is-out { transform: translateY(-105%); }
+.hero__caret { align-self: center; width: .07em; height: .82em; background: var(--accent); border-radius: 1px; animation: heroCaret 1.05s steps(1, end) infinite; }
+@keyframes heroCaret { 0%, 50% { opacity: 1; } 50.01%, 100% { opacity: 0; } }
 .hero__logo { width: .8em; height: .8em; flex-shrink: 0; transform-origin: center; transition: transform .6s var(--ease); }
 .hero__logo .hl-o, .hero__logo .hl-t { stroke: var(--accent-ink); stroke-width: 10; }
 .hero__logo .hl-t { stroke-linecap: round; }
 .hero__logo .hl-d { fill: var(--accent-ink); }
 .hero__accent { color: var(--accent-ink); }
 .hero__tagline { font-family: var(--font-display); font-weight: 500; font-size: clamp(17px, 2.4vw, 22px); color: var(--text); margin-top: 22px; letter-spacing: -.01em; }
-.hero__def { font-family: var(--font-mono); font-size: clamp(13px, 1.7vw, 15px); color: var(--soft); margin-top: 24px; max-width: 48ch; min-height: 3em; transition: opacity .3s var(--ease), transform .3s var(--ease); }
-.hero__def.is-swapping { opacity: 0; transform: translateY(-6px); }
+.hero__term { font-family: var(--font-mono); font-size: clamp(13px, 1.7vw, 15px); color: var(--soft); margin-top: 24px; max-width: 48ch; min-height: 3em; letter-spacing: -.01em; }
+.hero__term-prompt, .hero__term-q { color: var(--soft); opacity: .7; }
+.hero__term-msg { color: var(--accent-ink); }
+.hero__term-caret { display: inline-block; width: .55ch; height: 1.05em; transform: translateY(.16em); background: var(--accent); margin: 0 1px; animation: heroCaret 1.05s steps(1, end) infinite; }
 .hero__lead { margin-top: 22px; max-width: 56ch; color: var(--soft); font-size: clamp(15px, 2vw, 17.5px); padding-left: 18px; border-left: 3px solid var(--accent); }
 .hero__cta { margin-top: 32px; display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
 .hero__link { font-family: var(--font-mono); font-size: 12.5px; color: var(--dim); transition: color .2s, transform .2s var(--ease); }
@@ -183,10 +188,10 @@ ul { list-style: none; }
 .hero__statl { color: var(--dim); font-family: var(--font-mono); font-size: 12px; text-transform: uppercase; letter-spacing: .08em; }
 
 /* entrada del hero */
-.hero__content .hero__kick, .hero__content .hero__title, .hero__content .hero__def, .hero__content .hero__cta { opacity: 0; transform: translateY(16px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
+.hero__content .hero__kick, .hero__content .hero__title, .hero__content .hero__term, .hero__content .hero__cta { opacity: 0; transform: translateY(16px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
 .hero__content.is-loaded .hero__kick { opacity: 1; transform: none; transition-delay: .05s; }
 .hero__content.is-loaded .hero__title { opacity: 1; transform: none; transition-delay: .14s; }
-.hero__content.is-loaded .hero__def { opacity: 1; transform: none; transition-delay: .34s; }
+.hero__content.is-loaded .hero__term { opacity: 1; transform: none; transition-delay: .34s; }
 .hero__content.is-loaded .hero__cta { opacity: 1; transform: none; transition-delay: .46s; }
 
 /* menú CV */

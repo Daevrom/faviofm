@@ -9,6 +9,7 @@
   var STORAGE_KEY = "favio-lang";
   var SUPPORTED = ["es", "en"];
   var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var onLangChange = []; // callbacks a re-ejecutar cuando cambia el idioma (p.ej. re-teclear el hero)
 
   /* ---------- Idioma ---------- */
   function detectInitialLang() {
@@ -41,6 +42,7 @@
       a.classList.toggle("is-suggested", a.getAttribute("data-cv") === lang);
     });
     localStorage.setItem(STORAGE_KEY, lang);
+    onLangChange.forEach(function (fn) { try { fn(); } catch (e) {} });
   }
 
   function setupLangToggle() {
@@ -158,34 +160,71 @@
     });
   }
 
-  /* ---------- Hero: rol + definición que ciclan (estilo "define y cambia") ---------- */
+  /* ---------- Hero: rol que rota (revelado con máscara) + línea de terminal tecleada ---------- */
   function setupHeroCycle() {
     var word = document.getElementById("heroCycle");
-    var def = document.getElementById("heroDef");
-    var logo = document.getElementById("heroLogo");
-    if (!word) return;
+    var inner = word && word.querySelector(".hero__cycle-inner");
+    var term = document.getElementById("heroTerm");
+    var termMsg = document.getElementById("heroTermMsg");
+    if (!word || !inner) return;
     var words = (word.getAttribute("data-words") || "").split(",").map(function (w) { return w.trim(); }).filter(Boolean);
-    function defs() {
+    function msgs() {
       var lang = document.documentElement.getAttribute("lang") || "es";
-      var raw = (def && (def.getAttribute("data-defs-" + lang) || def.getAttribute("data-defs-es"))) || "";
-      return raw.split("|").map(function (d) { return d.trim(); }).filter(Boolean);
+      var raw = (term && (term.getAttribute("data-msgs-" + lang) || term.getAttribute("data-msgs-es"))) || "";
+      return raw.split("|").map(function (m) { return m.trim(); }).filter(Boolean);
     }
     var i = 0;
-    function paint() {
-      if (words[i]) word.textContent = words[i];
-      var d = defs(); if (def && d[i]) def.textContent = "// " + d[i];
+    var typeTimer = null;
+    function clearType() { if (typeTimer) { clearTimeout(typeTimer); typeTimer = null; } }
+    function typeMsg(text, done) {
+      if (!termMsg) { if (done) done(); return; }
+      var n = 0;
+      (function step() {
+        termMsg.textContent = text.slice(0, n);
+        if (n++ >= text.length) { clearType(); if (done) done(); return; }
+        typeTimer = setTimeout(step, 42);
+      })();
     }
-    paint();
-    if (reduceMotion || words.length < 2) return;
+    function eraseMsg(done) {
+      if (!termMsg) { if (done) done(); return; }
+      var text = termMsg.textContent, n = text.length;
+      (function step() {
+        termMsg.textContent = text.slice(0, n);
+        if (n-- <= 0) { clearType(); if (done) done(); return; }
+        typeTimer = setTimeout(step, 22);
+      })();
+    }
+
+    // Estado inicial
+    inner.textContent = words[i] || inner.textContent;
+    if (termMsg) termMsg.textContent = msgs()[i] || termMsg.textContent;
+
+    if (reduceMotion || words.length < 2) {
+      // Sin animación: solo re-pintar el mensaje si cambia el idioma
+      onLangChange.push(function () { if (termMsg) termMsg.textContent = msgs()[i] || ""; });
+      return;
+    }
+
+    // Al cambiar idioma: re-teclear el mensaje actual en el idioma nuevo
+    onLangChange.push(function () { clearType(); typeMsg(msgs()[i] || ""); });
+
     setInterval(function () {
       i = (i + 1) % words.length;
-      if (logo) logo.style.transform = "rotate(" + (i * 120) + "deg)";
-      word.classList.add("is-swapping"); if (def) def.classList.add("is-swapping");
+      // Título: revelado con máscara (sale hacia arriba, entra desde abajo)
+      inner.classList.add("is-out");
       setTimeout(function () {
-        paint();
-        word.classList.remove("is-swapping"); if (def) def.classList.remove("is-swapping");
-      }, 300);
-    }, 2400);
+        inner.textContent = words[i];
+        inner.classList.remove("is-out");
+        inner.style.transition = "none";
+        inner.style.transform = "translateY(105%)";
+        void inner.offsetHeight; // forzar reflow
+        inner.style.transition = "";
+        inner.style.transform = "";
+      }, 420);
+      // Terminal: borrar y teclear el nuevo mensaje
+      clearType();
+      eraseMsg(function () { typeMsg(msgs()[i]); });
+    }, 4000);
   }
 
   /* ---------- Condensador: reactividad al cursor ---------- */

@@ -55,11 +55,14 @@
             <p class="hero__kick"><span class="hero__dot"></span><span data-i18n="hero.kick">disponible para proyectos</span></p>
             <h1 class="hero__title">
               <span class="hero__static">Product</span>
-              <span class="hero__cycle hero__accent" id="heroCycle" data-words="Manager,Designer,Builder,Strategist">Manager</span>
+              <span class="hero__cycleline">
+                <span class="hero__cycle hero__accent" id="heroCycle" data-words="Manager,Designer,Builder"><span class="hero__cycle-inner">Manager</span></span>
+                <span class="hero__caret" aria-hidden="true"></span>
+              </span>
             </h1>
-            <p class="hero__def" id="heroDef"
-               data-defs-es="aterriza la estrategia en un producto que sale|diseña la interfaz y el sistema, no solo el plan|lo construye y no para hasta producción|piensa en el negocio y en quien lo usa"
-               data-defs-en="lands strategy into a product that ships|designs the interface and system, not just the plan|builds it and won’t stop until it’s live|thinks about the business and the person using it">// aterriza la estrategia en un producto que sale</p>
+            <p class="hero__term" id="heroTerm"
+               data-msgs-es="aterriza la estrategia en un producto que sale|diseña la interfaz y el sistema, no solo el plan|lo construye y no para hasta producción"
+               data-msgs-en="lands strategy into a product that ships|designs the interface and system, not just the plan|builds it and won’t stop until it’s live"><span class="hero__term-prompt">$ git commit -m "</span><span class="hero__term-msg" id="heroTermMsg">aterriza la estrategia en un producto que sale</span><span class="hero__term-caret" aria-hidden="true"></span><span class="hero__term-q">"</span></p>
             <div class="hero__cta">
               <a class="btn btn--primary" href="#work" data-i18n="hero.ctaWork">Ver mi trabajo</a>
               <a class="btn btn--ghost" href="assets/cv/CV_FavioFernandez.pdf" download data-i18n="hero.ctaCv">Descargar CV</a>
