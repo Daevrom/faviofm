@@ -143,11 +143,14 @@ ul { list-style: none; }
 
 /* condensador (isotipo animado) */
 .hero__viz { position: relative; display: flex; justify-content: flex-start; align-items: center; }
-.hero__photo { position: relative; z-index: 1; width: min(100%, 440px); aspect-ratio: 4/5; margin-left: clamp(-40px, -2vw, -18px); }
+.hero__photo { position: relative; z-index: 1; width: min(100%, 600px); margin-left: clamp(-40px, -2vw, -18px); }
 .hero__photo img { width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-lg); border: 1px solid var(--line); box-shadow: var(--shadow); }
 /* cutout: sin panel ni borde → el recorte va POR ENCIMA de la ficha */
 /* variante recortada / fondo blanco que se funde con el hero */
-.hero__photo--cutout img { border: 0; border-radius: 0; box-shadow: none; object-position: center top; -webkit-mask-image: linear-gradient(to bottom, #000 84%, transparent 100%); mask-image: linear-gradient(to bottom, #000 84%, transparent 100%); }
+/* cutout completo (aspecto natural, sin recorte lateral) + desvanecido solo abajo */
+.hero__photo--cutout img { height: auto; object-fit: contain; border: 0; border-radius: 0; box-shadow: none;
+  -webkit-mask-image: linear-gradient(to bottom, #000 74%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 74%, transparent 100%); }
 .hero__seal { position: absolute; left: -16px; bottom: 26px; width: 84px; height: 84px; border-radius: 50%; background: var(--bg); border: 1px solid var(--line-2); box-shadow: var(--shadow); display: flex; align-items: center; justify-content: center; z-index: 2; }
 .hero__seal .condensador { width: 58px; }
 .condensador { width: min(360px, 82%); height: auto; overflow: visible; }
