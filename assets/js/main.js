@@ -56,6 +56,44 @@
     });
   }
 
+  /* ---------- Tema (claro / oscuro) ---------- */
+  var THEME_KEY = "favio-theme";
+  function detectInitialTheme() {
+    var q = (location.search.match(/theme=(dark|light)/) || [])[1];
+    if (q) return q;
+    var saved = localStorage.getItem(THEME_KEY);
+    if (saved === "light" || saved === "dark") return saved;
+    return (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) ? "dark" : "light";
+  }
+  function applyTheme(theme, persist) {
+    document.documentElement.setAttribute("data-theme", theme);
+    var btn = document.getElementById("themeToggle");
+    if (btn) {
+      btn.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
+      btn.setAttribute("aria-label", theme === "dark" ? "Cambiar a modo claro" : "Cambiar a modo oscuro");
+    }
+    if (persist) localStorage.setItem(THEME_KEY, theme);
+  }
+  function setupThemeToggle() {
+    applyTheme(detectInitialTheme(), false);
+    var btn = document.getElementById("themeToggle");
+    if (btn) {
+      btn.addEventListener("click", function () {
+        var current = document.documentElement.getAttribute("data-theme") || "light";
+        applyTheme(current === "dark" ? "light" : "dark", true);
+      });
+    }
+    // Si no hay preferencia guardada, seguir al sistema en vivo
+    if (window.matchMedia) {
+      var mq = window.matchMedia("(prefers-color-scheme: dark)");
+      var onChange = function (e) {
+        if (!localStorage.getItem(THEME_KEY)) applyTheme(e.matches ? "dark" : "light", false);
+      };
+      if (mq.addEventListener) mq.addEventListener("change", onChange);
+      else if (mq.addListener) mq.addListener(onChange);
+    }
+  }
+
   /* ---------- Count-up ---------- */
   function animateCount(el) {
     if (el.dataset.counted) return;
@@ -287,6 +325,7 @@
   document.addEventListener("DOMContentLoaded", function () {
     applyLang(detectInitialLang());
     setupLangToggle();
+    setupThemeToggle();
     setupReveal();
     setupLightbox();
     setupNavShadow();

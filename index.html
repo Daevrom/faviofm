@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light dark" />
+  <script>(function(){try{var q=(location.search.match(/theme=(dark|light)/)||[])[1];var t=q||localStorage.getItem('favio-theme')||(window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
   <title>Favio Fernández ( Product Manager</title>
   <meta name="description" data-i18n="meta.description"
     content="Product Manager que diseña el producto que gestiona. 7+ años planificando, coordinando y entregando en sistemas críticos de alcance nacional." />
@@ -41,6 +43,10 @@
           <span class="lang-toggle__sep">|</span>
           <span class="lang-toggle__opt" data-lang="en">EN</span>
         </button>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar tema claro/oscuro" aria-pressed="false">
+          <svg class="ti-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+          <svg class="ti-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.2v2.4M12 19.4v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2.2 12h2.4M19.4 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"/></svg>
+        </button>
         <a href="#contact" class="btn btn--pill" data-i18n="nav.cta">Hablemos</a>
       </div>
     </div>
@@ -70,7 +76,7 @@
           </div>
           <div class="hero__viz">
             <div class="hero__photo hero__photo--cutout">
-              <img src="assets/img/favio-hero-tight.png" alt="Favio Fernández, Product Manager" loading="eager" />
+              <img src="assets/img/favio-hero-cut.png" alt="Favio Fernández, Product Manager" loading="eager" />
             </div>
             <ul class="hero__stats reveal">
               <li><span class="hero__statn">10+</span><span class="hero__statl" data-i18n="hero.stat1">Años de experiencia</span></li>
