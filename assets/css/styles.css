@@ -143,7 +143,7 @@ ul { list-style: none; }
 
 /* condensador (isotipo animado) */
 .hero__viz { position: relative; display: flex; justify-content: flex-start; align-items: center; }
-.hero__photo { position: relative; z-index: 1; width: min(100%, 600px); margin-left: clamp(-40px, -2vw, -18px); }
+.hero__photo { position: relative; z-index: 1; width: min(118%, 760px); margin-left: clamp(-90px, -6vw, -40px); }
 .hero__photo img { width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-lg); border: 1px solid var(--line); box-shadow: var(--shadow); }
 /* cutout: sin panel ni borde → el recorte va POR ENCIMA de la ficha */
 /* variante recortada / fondo blanco que se funde con el hero */
