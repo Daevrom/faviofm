@@ -333,6 +333,60 @@
       </div>
     </section>
 
+    <!-- ===== INAC · Liderazgo a escala nacional ===== -->
+    <section class="section" id="inac">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__kicker"><span data-i18n="inac.kicker">Liderazgo a escala nacional</span></span>
+          <h2 class="section__title" data-i18n="inac.title">INAC · dirigí la infraestructura tecnológica de <em>27 aeropuertos</em></h2>
+          <p class="section__sub" data-i18n="inac.sub">Líder de Infraestructura Tecnológica en la autoridad aeronáutica civil nacional: operación crítica 24/7, control de tráfico aéreo (ATC) y 181 dispositivos de red, de alcance nacional (2025–2026).</p>
+        </header>
+        <div class="inac__grid reveal" data-delay="1">
+          <!-- mapa-red: 27 aeropuertos como nodos (eco del condensador) -->
+          <div class="inac-map">
+            <svg class="inac-map__svg" viewBox="0 0 520 360" fill="none" aria-hidden="true">
+              <g class="inac-map__line">
+                <path d="M120 110 L220 145 L340 112 L420 165"/>
+                <path d="M120 110 L180 215 L300 235 L420 165"/>
+                <path d="M220 145 L300 235"/><path d="M340 112 L300 235"/>
+                <path d="M180 215 L140 295 L280 315 L400 275 L420 165"/>
+              </g>
+              <g class="inac-map__node">
+                <circle cx="120" cy="110" r="5.5" class="is-hot"/><circle cx="220" cy="145" r="5.5"/><circle cx="340" cy="112" r="5.5"/>
+                <circle cx="420" cy="165" r="5.5" class="is-hot"/><circle cx="180" cy="215" r="5"/><circle cx="300" cy="235" r="5"/>
+                <circle cx="140" cy="295" r="4.5"/><circle cx="280" cy="315" r="4.5"/><circle cx="400" cy="275" r="4.5"/>
+                <circle cx="160" cy="150" r="3.5"/><circle cx="260" cy="112" r="3.5"/><circle cx="380" cy="152" r="3.5"/>
+                <circle cx="240" cy="200" r="3.5"/><circle cx="350" cy="195" r="3.5"/><circle cx="200" cy="272" r="3.5"/>
+                <circle cx="340" cy="285" r="3.5"/><circle cx="440" cy="212" r="3.5"/><circle cx="110" cy="190" r="3.5"/>
+                <circle cx="290" cy="162" r="3"/><circle cx="150" cy="245" r="3"/><circle cx="410" cy="115" r="3"/>
+                <circle cx="240" cy="285" r="3"/><circle cx="370" cy="245" r="3"/><circle cx="190" cy="122" r="3"/>
+                <circle cx="320" cy="152" r="3"/><circle cx="130" cy="155" r="3"/><circle cx="270" cy="268" r="3"/>
+              </g>
+            </svg>
+            <span class="inac-map__cap" data-i18n="inac.maplabel">27 aeropuertos · red nacional</span>
+          </div>
+          <!-- la prueba: métricas de resultado + gerencia + campo -->
+          <div class="inac__proof">
+            <ul class="kpis__row kpis--grid" aria-label="Métricas clave">
+              <li><span class="kpis__n" data-count="36">0</span><span class="kpis__l" data-i18n="metric.sites">sedes coordinadas</span></li>
+              <li><span class="kpis__n" data-count="15" data-suffix=" min">0</span><span class="kpis__l" data-i18n="metric.mttr">MTTR promedio</span></li>
+              <li><span class="kpis__n" data-count="30" data-prefix="~" data-suffix=" %">0</span><span class="kpis__l" data-i18n="metric.savings">ahorro presupuestario</span></li>
+              <li><span class="kpis__n">4.4/5</span><span class="kpis__l" data-i18n="metric.sat">satisfacción · mesa de servicio</span></li>
+            </ul>
+            <p class="inac__lead" data-i18n="inac.lead">Coordiné equipos y proveedores para sostener la operación 24/7 y estandaricé la red (181 dispositivos) sin frenar el control de tráfico aéreo.</p>
+            <div class="inac__shots">
+              <button class="inac__shot" type="button" data-full="assets/img/work/inac-enlace.jpg" data-cap="INAC · instalación de enlace de radio (Maracaibo)">
+                <img src="assets/img/work/inac-enlace.jpg" alt="INAC · enlace de radio" loading="lazy" />
+              </button>
+              <button class="inac__shot" type="button" data-full="assets/img/work/inac-datacenter.jpg" data-cap="INAC · centro de datos / racks">
+                <img src="assets/img/work/inac-datacenter.jpg" alt="INAC · centro de datos" loading="lazy" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ===== PERFIL / HILO CONDUCTOR ===== -->
     <section class="section section--alt" id="about">
       <div class="container about__grid">
@@ -351,35 +405,6 @@
             defino el alcance y, junto al equipo, llevamos la solución a producción. Y algo que disfruto de verdad: el diseño
             y la concepción del producto.
           </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== INAC · Infraestructura crítica ===== -->
-    <section class="section" id="inac">
-      <div class="container">
-        <header class="section__head reveal">
-          <span class="section__kicker"><span data-i18n="inac.kicker">Infraestructura crítica</span></span>
-          <h2 class="section__title" data-i18n="inac.title">INAC · lideré la infraestructura de <em>27 aeropuertos</em></h2>
-          <p class="section__sub" data-i18n="inac.sub">Líder de Infraestructura Tecnológica: operación crítica 24/7, control de tráfico aéreo (ATC) y 181 dispositivos de red ) de alcance nacional (2025–2026).</p>
-        </header>
-        <div class="kpis reveal">
-          <ul class="kpis__row" aria-label="Métricas clave">
-            <li><span class="kpis__n" data-count="36">0</span><span class="kpis__l" data-i18n="metric.sites">sedes coordinadas</span></li>
-            <li><span class="kpis__n" data-count="15" data-suffix=" min">0</span><span class="kpis__l" data-i18n="metric.mttr">MTTR promedio</span></li>
-            <li><span class="kpis__n" data-count="30" data-prefix="~" data-suffix=" %">0</span><span class="kpis__l" data-i18n="metric.savings">ahorro presupuestario</span></li>
-            <li><span class="kpis__n">4.4/5</span><span class="kpis__l" data-i18n="metric.sat">satisfacción · mesa de servicio</span></li>
-          </ul>
-        </div>
-        <div class="field field--2 reveal" data-delay="1">
-          <div class="field__grid">
-            <div class="field__item field__item--tall" data-full="assets/img/work/inac-enlace.jpg" data-cap="INAC ( instalación de enlace de radio (Maracaibo)">
-              <img src="assets/img/work/inac-enlace.jpg" alt="INAC ) enlace de radio" loading="lazy" />
-            </div>
-            <div class="field__item field__item--tall" data-full="assets/img/work/inac-datacenter.jpg" data-cap="INAC ( centro de datos / racks">
-              <img src="assets/img/work/inac-datacenter.jpg" alt="INAC ) centro de datos" loading="lazy" />
-            </div>
-          </div>
         </div>
       </div>
     </section>
