@@ -375,27 +375,19 @@ ul { list-style: none; }
 .kpis__n { font-family: var(--font-display); font-weight: 800; font-size: clamp(24px, 3.6vw, 36px); letter-spacing: -.02em; font-variant-numeric: tabular-nums; color: var(--accent-ink); }
 .kpis__l { font-size: 12.5px; color: var(--soft); }
 
-/* ---------- INAC · liderazgo a escala nacional ---------- */
-.inac__grid { margin-top: clamp(32px, 5vw, 52px); display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 48px); align-items: center; }
-.inac-map { position: relative; border-radius: var(--radius-lg); border: 1px solid var(--line-2); background: radial-gradient(120% 120% at 25% 12%, #2c2620, #1c1712); overflow: hidden; box-shadow: var(--shadow); }
-.inac-map__svg { display: block; width: 100%; height: auto; }
-.inac-map__line path { stroke: rgba(216, 176, 106, .3); stroke-width: 1; fill: none; }
-.inac-map__node circle { fill: var(--accent); }
-.inac-map__node circle.is-hot { transform-box: fill-box; transform-origin: center; filter: drop-shadow(0 0 6px rgba(216, 176, 106, .7)); animation: nodePulse 2.8s var(--ease) infinite; }
-.inac-map__node circle.is-hot:last-of-type { animation-delay: 1.2s; }
-.inac-map__cap { position: absolute; left: 16px; bottom: 14px; font-family: var(--font-mono); font-size: 11px; letter-spacing: .04em; color: #eccf92; background: rgba(20, 15, 8, .5); backdrop-filter: blur(4px); padding: 5px 10px; border-radius: 6px; }
-.inac__proof { display: flex; flex-direction: column; gap: 20px; }
-.kpis--grid { grid-template-columns: 1fr 1fr; border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; background: var(--surface); }
-.kpis--grid li { padding: clamp(16px, 2.4vw, 24px); border-left: 1px solid var(--line); border-top: 1px solid var(--line); }
-.kpis--grid li:nth-child(1), .kpis--grid li:nth-child(2) { border-top: 0; }
-.kpis--grid li:nth-child(odd) { border-left: 0; }
-.inac__lead { color: var(--soft); font-size: 15px; max-width: 52ch; }
-.inac__shots { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+/* ---------- INAC · liderazgo a escala nacional (sobrio) ---------- */
+.inac__body { margin-top: clamp(32px, 5vw, 52px); display: flex; flex-direction: column; gap: clamp(22px, 3vw, 30px); }
+.inac__body .kpis { margin-top: 0; }
+.inac__lead { color: var(--soft); font-size: 15px; max-width: 62ch; }
+.inac__shots { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; max-width: 620px; }
 .inac__shot { padding: 0; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; cursor: zoom-in; background: none; aspect-ratio: 3 / 2; }
 .inac__shot img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s var(--ease); filter: saturate(.9) contrast(1.02); display: block; }
 .inac__shot:hover img { transform: scale(1.05); }
-@media (max-width: 860px) {
-  .inac__grid { grid-template-columns: 1fr; gap: 22px; }
+@media (max-width: 720px) {
+  .kpis__row { grid-template-columns: 1fr 1fr; }
+  .kpis__row li:nth-child(-n+2) { border-top: 0; }
+  .kpis__row li:nth-child(odd) { border-left: 0; }
+  .kpis__row li:nth-child(n+3) { border-top: 1px solid var(--line); }
 }
 
 /* ---------- Trayectoria ---------- */
