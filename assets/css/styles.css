@@ -423,7 +423,7 @@ ul { list-style: none; }
 
 /* ---------- Diseño (evidencia) ---------- */
 /* ---------- Web card (producto en vivo, marco navegador + scroll) ---------- */
-.webcard { display: grid; grid-template-columns: 1.35fr 1fr; gap: clamp(24px, 4vw, 52px); align-items: center; margin-bottom: 40px; }
+.webcard { display: grid; grid-template-columns: 1.35fr 1fr; gap: clamp(24px, 4vw, 52px); align-items: center; margin-bottom: clamp(56px, 8vw, 96px); }
 .webcard__frame { border: 1px solid var(--line); border-radius: 14px; overflow: hidden; box-shadow: var(--shadow); background: #fff; }
 .webcard__bar { display: flex; align-items: center; gap: 12px; padding: 10px 14px; background: #f1ece2; border-bottom: 1px solid var(--line); }
 .webcard__dots { display: flex; gap: 6px; flex-shrink: 0; }
@@ -458,7 +458,8 @@ ul { list-style: none; }
 .phone { position: relative; width: 210px; aspect-ratio: 9 / 19.5; background: #14161c; border-radius: 30px; padding: 7px; box-shadow: 0 26px 50px -26px rgba(31,26,15,.55); border: 1px solid #2a2c34; flex-shrink: 0; }
 .phone__scr { width: 100%; height: 100%; border-radius: 23px; overflow: hidden; background: #000; }
 .phone__scr img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
-.appcard { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 4vw, 52px); align-items: center; margin-bottom: 40px; }
+.appcard { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 4vw, 52px); align-items: center; margin-bottom: clamp(56px, 8vw, 96px); }
+#design .webcard:last-child, #design .appcard:last-child { margin-bottom: 0; }
 .appcard--flip .appcard__visual, .appcard--flip .appcard__art { order: 2; }
 .appcard__visual { display: flex; justify-content: center; align-items: flex-start; padding: 8px 0; }
 .appcard__visual .phone { width: 196px; }
