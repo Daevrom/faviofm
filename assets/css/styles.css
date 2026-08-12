@@ -430,17 +430,17 @@ ul { list-style: none; }
 .webcard__dots i { width: 11px; height: 11px; border-radius: 50%; background: #cfc7b8; }
 .webcard__dots i:nth-child(1) { background: #e6a08a; } .webcard__dots i:nth-child(2) { background: #e6c98a; } .webcard__dots i:nth-child(3) { background: #9ec79a; }
 .webcard__url { flex: 1; min-width: 0; font-family: var(--font-mono); font-size: 12px; color: var(--dim); background: #fff; border: 1px solid var(--line); border-radius: 7px; padding: 6px 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.webcard__stage { display: flex; flex-direction: column; gap: 14px; }
+.webcard__stage { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.webcard__frame { min-width: 0; }
 .webcard__toggle { display: inline-flex; gap: 8px; align-self: flex-start; }
 .webcard__vt { font-family: var(--font-mono); font-size: 12px; letter-spacing: .04em; padding: 7px 15px; border: 1px solid var(--line-2); border-radius: 999px; background: var(--surface); color: var(--soft); cursor: pointer; transition: color .2s, background .2s, border-color .2s; }
 .webcard__vt:hover { border-color: var(--accent); color: var(--accent-ink); }
 .webcard__vt.is-active { background: var(--accent-tint); border-color: var(--accent); color: var(--accent-ink); }
-.webcard__view { position: relative; }
-.webcard__view iframe { transition: width .35s var(--ease); }
-.webcard__view.is-mobile { display: flex; justify-content: center; background: repeating-linear-gradient(45deg, #0d1526, #0d1526 10px, #101a2e 10px, #101a2e 20px); }
-.webcard__view.is-mobile iframe { width: 380px; max-width: 100%; border-left: 1px solid rgba(255,255,255,.08); border-right: 1px solid rgba(255,255,255,.08); }
-.webcard__view { height: 470px; overflow: hidden; background: #10182c; }
+.webcard__view { position: relative; height: 470px; overflow: hidden; background: #10182c; }
+/* ancho/alto/escala del iframe los fija el JS (escritorio = render a 1280 escalado; móvil = 390) */
 .webcard__view iframe { width: 100%; height: 100%; border: 0; display: block; }
+.webcard__view.is-mobile { display: flex; justify-content: center; background: repeating-linear-gradient(45deg, #0d1526, #0d1526 10px, #101a2e 10px, #101a2e 20px); }
+.webcard__view.is-mobile iframe { border-left: 1px solid rgba(255,255,255,.08); border-right: 1px solid rgba(255,255,255,.08); }
 .webcard__view--img { overflow-y: auto; overflow-x: hidden; background: #fff; scrollbar-width: thin; scrollbar-color: var(--line-2) transparent; }
 .webcard__view--img::-webkit-scrollbar { width: 10px; }
 .webcard__view--img::-webkit-scrollbar-thumb { background: var(--line-2); border-radius: 6px; }

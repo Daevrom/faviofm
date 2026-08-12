@@ -152,16 +152,39 @@
 
   /* ---------- Webcard: selector escritorio / móvil ---------- */
   function setupWebcardToggle() {
+    var DESKTOP_W = 1280, MOBILE_W = 390;
     document.querySelectorAll(".webcard__toggle").forEach(function (tg) {
       var card = tg.closest(".webcard");
       var view = card && card.querySelector(".webcard__view");
-      if (!view) return;
+      var iframe = view && view.querySelector("iframe");
+      if (!view || !iframe) return;
+      function fit() {
+        if (view.classList.contains("is-mobile")) {
+          iframe.style.position = "static";
+          iframe.style.width = MOBILE_W + "px";
+          iframe.style.height = "100%";
+          iframe.style.transform = "none";
+        } else {
+          // renderiza a ancho de escritorio real y escala para que quepa; absolute para no estirar el marco
+          var s = view.clientWidth / DESKTOP_W;
+          iframe.style.position = "absolute";
+          iframe.style.top = "0";
+          iframe.style.left = "0";
+          iframe.style.width = DESKTOP_W + "px";
+          iframe.style.height = Math.round(view.clientHeight / s) + "px";
+          iframe.style.transformOrigin = "top left";
+          iframe.style.transform = "scale(" + s + ")";
+        }
+      }
       tg.addEventListener("click", function (e) {
         var btn = e.target.closest(".webcard__vt");
         if (!btn) return;
         tg.querySelectorAll(".webcard__vt").forEach(function (b) { b.classList.toggle("is-active", b === btn); });
         view.classList.toggle("is-mobile", btn.getAttribute("data-view") === "mobile");
+        fit();
       });
+      fit();
+      window.addEventListener("resize", fit);
     });
   }
 
