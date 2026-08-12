@@ -583,6 +583,8 @@ ul { list-style: none; }
 .contact__method-label { font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: .1em; color: var(--dim); }
 .contact__method-val { font-size: 15.5px; font-weight: 600; color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .contact__method-arrow { color: var(--accent-ink); flex-shrink: 0; font-size: 15px; }
+.contact__cv { width: 100%; gap: 10px; padding: 13px; margin-top: 2px; }
+.contact__cv svg { width: 18px; height: 18px; }
 
 /* ---------- Footer ---------- */
 .footer { border-top: 1px solid var(--line); padding: 34px 0; background: var(--bg-alt); }
