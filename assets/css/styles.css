@@ -169,11 +169,14 @@ ul { list-style: none; }
 /* cutout: sin panel ni borde → el recorte va POR ENCIMA de la ficha */
 /* variante recortada / fondo blanco que se funde con el hero */
 /* cutout completo (aspecto natural, sin recorte lateral) + desvanecido solo abajo */
-.hero__photo--cutout img { height: auto; object-fit: contain; border: 0; border-radius: 0; box-shadow: none;
-  -webkit-mask-image: linear-gradient(to bottom, #000 74%, transparent 100%);
+.hero__photo--cutout img { height: auto; object-fit: contain; border: 0; border-radius: 0; box-shadow: none; }
+/* foto clara: recorte transparente que se funde por abajo */
+.hero__photo--cutout .hero-light { -webkit-mask-image: linear-gradient(to bottom, #000 74%, transparent 100%);
   mask-image: linear-gradient(to bottom, #000 74%, transparent 100%); }
-/* en oscuro: leve profundidad para separar al sujeto del fondo (sin halo blanco) */
-:root[data-theme="dark"] .hero__photo--cutout img { filter: drop-shadow(0 10px 34px rgba(0,0,0,.55)); }
+/* foto oscura (estudio, bordes ya fundidos): solo se muestra en modo oscuro */
+.hero__photo--cutout .hero-dark { display: none; }
+:root[data-theme="dark"] .hero__photo--cutout .hero-light { display: none; }
+:root[data-theme="dark"] .hero__photo--cutout .hero-dark { display: block; }
 .hero__seal { position: absolute; left: -16px; bottom: 26px; width: 84px; height: 84px; border-radius: 50%; background: var(--bg); border: 1px solid var(--line-2); box-shadow: var(--shadow); display: flex; align-items: center; justify-content: center; z-index: 2; }
 .hero__seal .condensador { width: 58px; }
 .condensador { width: min(360px, 82%); height: auto; overflow: visible; }
