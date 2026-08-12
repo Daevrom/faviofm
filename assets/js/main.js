@@ -150,6 +150,21 @@
     document.addEventListener("keydown", function (e) { if (e.key === "Escape") hide(); });
   }
 
+  /* ---------- Webcard: selector escritorio / móvil ---------- */
+  function setupWebcardToggle() {
+    document.querySelectorAll(".webcard__toggle").forEach(function (tg) {
+      var card = tg.closest(".webcard");
+      var view = card && card.querySelector(".webcard__view");
+      if (!view) return;
+      tg.addEventListener("click", function (e) {
+        var btn = e.target.closest(".webcard__vt");
+        if (!btn) return;
+        tg.querySelectorAll(".webcard__vt").forEach(function (b) { b.classList.toggle("is-active", b === btn); });
+        view.classList.toggle("is-mobile", btn.getAttribute("data-view") === "mobile");
+      });
+    });
+  }
+
   /* ---------- Modal de caso (bento · desktop) ---------- */
   function setupCaseModal() {
     var modal = document.getElementById("csModal");
@@ -362,6 +377,7 @@
     setupReveal();
     setupLightbox();
     setupCaseModal();
+    setupWebcardToggle();
     setupNavShadow();
     setupScrollFx();
     setupCvMenu();
