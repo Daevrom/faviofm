@@ -430,9 +430,11 @@ ul { list-style: none; }
 .webcard__dots i { width: 11px; height: 11px; border-radius: 50%; background: #cfc7b8; }
 .webcard__dots i:nth-child(1) { background: #e6a08a; } .webcard__dots i:nth-child(2) { background: #e6c98a; } .webcard__dots i:nth-child(3) { background: #9ec79a; }
 .webcard__url { flex: 1; min-width: 0; font-family: var(--font-mono); font-size: 12px; color: var(--dim); background: #fff; border: 1px solid var(--line); border-radius: 7px; padding: 6px 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.webcard__toggle { flex-shrink: 0; display: flex; gap: 2px; background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 2px; }
-.webcard__vt { font-family: var(--font-mono); font-size: 11px; letter-spacing: .02em; padding: 5px 11px; border: 0; background: none; color: #726d63; border-radius: 6px; cursor: pointer; transition: color .2s, background .2s; }
-.webcard__vt.is-active { background: #f1ece2; color: #986524; }
+.webcard__stage { display: flex; flex-direction: column; gap: 14px; }
+.webcard__toggle { display: inline-flex; gap: 8px; align-self: flex-start; }
+.webcard__vt { font-family: var(--font-mono); font-size: 12px; letter-spacing: .04em; padding: 7px 15px; border: 1px solid var(--line-2); border-radius: 999px; background: var(--surface); color: var(--soft); cursor: pointer; transition: color .2s, background .2s, border-color .2s; }
+.webcard__vt:hover { border-color: var(--accent); color: var(--accent-ink); }
+.webcard__vt.is-active { background: var(--accent-tint); border-color: var(--accent); color: var(--accent-ink); }
 .webcard__view { position: relative; }
 .webcard__view iframe { transition: width .35s var(--ease); }
 .webcard__view.is-mobile { display: flex; justify-content: center; background: repeating-linear-gradient(45deg, #0d1526, #0d1526 10px, #101a2e 10px, #101a2e 20px); }
@@ -570,6 +572,17 @@ ul { list-style: none; }
 .form__field input::placeholder, .form__field textarea::placeholder { color: var(--dim); }
 .form .btn { width: 100%; padding: 13px; }
 .form__note { font-size: 12px; color: var(--dim); text-align: center; }
+
+/* contacto directo: correo + whatsapp */
+.contact__card { display: flex; flex-direction: column; gap: 14px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: clamp(20px, 3vw, 28px); box-shadow: var(--shadow); }
+.contact__method { display: flex; align-items: center; gap: 16px; padding: 16px 18px; border: 1px solid var(--line-2); border-radius: var(--radius); background: var(--bg); transition: border-color .2s, background .2s, transform .2s; }
+.contact__method:hover { border-color: var(--accent); background: var(--accent-tint); transform: translateY(-2px); }
+.contact__method-ic { width: 42px; height: 42px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; border-radius: 11px; background: var(--accent-tint); color: var(--accent-ink); }
+.contact__method-ic svg { width: 21px; height: 21px; }
+.contact__method-body { display: flex; flex-direction: column; gap: 2px; flex: 1; min-width: 0; }
+.contact__method-label { font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: .1em; color: var(--dim); }
+.contact__method-val { font-size: 15.5px; font-weight: 600; color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.contact__method-arrow { color: var(--accent-ink); flex-shrink: 0; font-size: 15px; }
 
 /* ---------- Footer ---------- */
 .footer { border-top: 1px solid var(--line); padding: 34px 0; background: var(--bg-alt); }
