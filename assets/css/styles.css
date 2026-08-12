@@ -169,10 +169,13 @@ ul { list-style: none; }
 /* cutout: sin panel ni borde → el recorte va POR ENCIMA de la ficha */
 /* variante recortada / fondo blanco que se funde con el hero */
 /* cutout completo (aspecto natural, sin recorte lateral) + desvanecido solo abajo */
-/* recorte transparente (mismo en claro y oscuro): difuminado SOLO abajo para que la rodilla no se vea cortada; laterales y arriba nítidos */
+/* recortes transparentes (blanca en claro, estudio en oscuro): difuminado SOLO abajo; laterales y arriba nítidos */
 .hero__photo--cutout img { height: auto; object-fit: contain; border: 0; border-radius: 0; box-shadow: none;
-  -webkit-mask-image: linear-gradient(to bottom, #000 85%, transparent 100%);
-  mask-image: linear-gradient(to bottom, #000 85%, transparent 100%); }
+  -webkit-mask-image: linear-gradient(to bottom, #000 72%, transparent 99%);
+  mask-image: linear-gradient(to bottom, #000 72%, transparent 99%); }
+.hero__photo--cutout .hero-dark { display: none; }
+:root[data-theme="dark"] .hero__photo--cutout .hero-light { display: none; }
+:root[data-theme="dark"] .hero__photo--cutout .hero-dark { display: block; }
 .hero__seal { position: absolute; left: -16px; bottom: 26px; width: 84px; height: 84px; border-radius: 50%; background: var(--bg); border: 1px solid var(--line-2); box-shadow: var(--shadow); display: flex; align-items: center; justify-content: center; z-index: 2; }
 .hero__seal .condensador { width: 58px; }
 .condensador { width: min(360px, 82%); height: auto; overflow: visible; }
