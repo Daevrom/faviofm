@@ -98,8 +98,56 @@
           <p class="section__sub" data-i18n="work.sub">Soy parte del día a día y hago mío el objetivo: defino el producto, lo diseño y, junto al equipo, lo llevamos a producción.</p>
         </header>
 
+        <!-- ===== BENTO (solo escritorio) ===== -->
+        <div class="bento reveal">
+          <!-- Flagship · SUMMA -->
+          <article class="tile tile--case tile--lg">
+            <span class="tile__eyebrow" data-i18n="cs1.eyebrow">Case study 01 · plataforma EdTech</span>
+            <h3 class="tile__title" data-i18n="cs1.title">Plataforma educativa · ERP escolar multi-sede</h3>
+            <p class="tile__line" data-i18n="cs1.sub">Un ERP para colegios K-12: una sola herramienta para dirección, coordinación, docentes y familias. Le damos forma junto al founder y el equipo, y aporto tanto en producto como en diseño.</p>
+            <ul class="tile__chips"><li data-i18n="cs1.c1">En desarrollo · piloto</li><li data-i18n="cs1.c2">5 roles → 1 producto</li><li data-i18n="cs1.c3">Multi-sede</li></ul>
+            <button class="tile__open" type="button" data-case="summa"><span data-i18n="work.viewcase">Ver caso</span> →</button>
+            <svg class="tile__wm" viewBox="257.72 237.71 193.22 193.22" fill="none" aria-hidden="true"><circle class="csc-ring" cx="354.33" cy="334.32" r="91.61"/><line class="csc-tr" x1="388.79" y1="313.88" x2="355.21" y2="339.44"/><polyline class="csc-tr" points="322.51 315.68 354.33 340.13 354.33 377.03"/><circle class="csc-node" cx="311.01" cy="307.63" r="12.32"/><circle class="csc-node" cx="397.65" cy="307.63" r="12.32"/><circle class="csc-node" cx="354.33" cy="384.88" r="12.32"/></svg>
+          </article>
+          <!-- Métrica · −40% -->
+          <article class="tile tile--metric">
+            <div class="tile__n">−40%</div>
+            <div class="tile__nl" data-i18n="work.m.cost">costo de producto</div>
+            <div class="tile__ns" data-i18n="work.m.costsub">Glik · rediseño de arquitectura (~$50k → ~$30k)</div>
+          </article>
+          <!-- Condensador -->
+          <article class="tile tile--cond">
+            <svg viewBox="257.72 237.71 193.22 193.22" fill="none" aria-hidden="true"><circle class="csc-ring" cx="354.33" cy="334.32" r="91.61"/><line class="csc-tr" x1="388.79" y1="313.88" x2="355.21" y2="339.44"/><polyline class="csc-tr" points="322.51 315.68 354.33 340.13 354.33 377.03"/><circle class="csc-node" cx="311.01" cy="307.63" r="12.32"/><circle class="csc-node" cx="397.65" cy="307.63" r="12.32"/><circle class="csc-node" cx="354.33" cy="384.88" r="12.32"/></svg>
+            <div class="tile__cl" data-i18n="work.m.disc">Producto · Diseño · Ingeniería</div>
+            <div class="tile__cs" data-i18n="work.m.discsub">Tres flujos que convergen — mi manera de trabajar.</div>
+          </article>
+          <!-- Glik -->
+          <article class="tile tile--case tile--mid">
+            <div class="tile__visual tile__visual--sigma">
+              <svg class="cs__arch" viewBox="0 0 220 262" fill="none" aria-hidden="true"><g class="arch-line"><path d="M45 68 L110 122"/><path d="M110 68 L110 122"/><path d="M175 68 L110 122"/><path d="M110 160 L45 210"/><path d="M110 160 L110 210"/><path d="M110 160 L175 210"/></g><g class="arch-chip"><rect x="18" y="38" width="54" height="30" rx="8"/><text x="45" y="54">App</text><rect x="83" y="38" width="54" height="30" rx="8"/><text x="110" y="54">Web</text><rect x="148" y="38" width="54" height="30" rx="8"/><text x="175" y="54">POS</text></g><rect class="arch-bff" x="72" y="122" width="76" height="38" rx="11"/><text class="arch-bfft" x="110" y="142">BFF</text><g class="arch-chip"><rect x="18" y="210" width="54" height="30" rx="8"/><text x="45" y="226">ERP</text><rect x="83" y="210" width="54" height="30" rx="8"/><text x="110" y="226">OCR</text><rect x="148" y="210" width="54" height="30" rx="8"/><text x="175" y="226">Auth</text></g></svg>
+            </div>
+            <span class="tile__eyebrow" data-i18n="cs3.eyebrow">Case study 02 · fintech de movilidad</span>
+            <h3 class="tile__title tile__title--sm" data-i18n="work.glik.short">Glik · Arquitectura de una fintech</h3>
+            <button class="tile__open" type="button" data-case="glik"><span data-i18n="work.viewcase">Ver caso</span> →</button>
+          </article>
+          <!-- MedicPC -->
+          <article class="tile tile--case tile--mid">
+            <div class="tile__visual"><img src="assets/img/field/board-1.jpg" alt="" loading="lazy"></div>
+            <span class="tile__eyebrow" data-i18n="cs2.eyebrow">Case study 03 · empresa fundada</span>
+            <h3 class="tile__title tile__title--sm" data-i18n="work.medic.short">MedicPC · Automatización industrial</h3>
+            <button class="tile__open" type="button" data-case="medicpc"><span data-i18n="work.viewcase">Ver caso</span> →</button>
+          </article>
+          <!-- Stat · 5 → 1 -->
+          <article class="tile tile--stat">
+            <div class="tile__sn">5 <b>→</b> 1</div>
+            <div class="tile__sl" data-i18n="work.m.roles">roles → un producto</div>
+          </article>
+        </div>
+
+        <!-- ===== STACK (solo móvil · intacto) ===== -->
+        <div class="work-stack">
         <!-- Case study 01 · confidencial (panel abstracto con condensador) -->
-        <article class="cs reveal">
+        <article class="cs reveal" data-case="summa">
           <div class="cs__visual cs__visual--sigma">
             <img class="cs__shot" src="assets/img/work/sigma-capture.png" alt="Plataforma educativa ) vista de producto" loading="lazy" />
             <svg class="cs__cond" viewBox="257.72 237.71 193.22 193.22" fill="none" aria-hidden="true">
@@ -158,7 +206,7 @@
         </article>
 
         <!-- Case study 02 · Glik (fintech de movilidad) -->
-        <article class="cs cs--flip reveal">
+        <article class="cs cs--flip reveal" data-case="glik">
           <div class="cs__visual cs__visual--sigma">
             <svg class="cs__arch" viewBox="0 0 220 262" fill="none" aria-hidden="true">
               <g class="arch-line">
@@ -225,7 +273,7 @@
         </article>
 
         <!-- Case study 03 · MedicPC (imagen real) -->
-        <article class="cs reveal">
+        <article class="cs reveal" data-case="medicpc">
           <div class="cs__visual">
             <img src="assets/img/field/board-1.jpg" alt="Tablero de fuerza y control ) MedicPC" loading="lazy" />
             <span class="cs__vlabel" data-i18n="cs2.vlabel">MedicPC · trabajo de campo</span>
@@ -274,6 +322,15 @@
             </ul>
           </div>
         </article>
+        </div><!-- /.work-stack -->
+
+        <!-- Modal de caso (desktop) -->
+        <div class="cs-modal" id="csModal" aria-hidden="true" role="dialog" aria-modal="true">
+          <button class="cs-modal__close" id="csModalClose" type="button" aria-label="Cerrar">×</button>
+          <div class="cs-modal__panel" role="document">
+            <div class="cs-modal__body" id="csModalBody"></div>
+          </div>
+        </div>
 
       </div>
     </section>

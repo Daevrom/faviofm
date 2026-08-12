@@ -150,6 +150,39 @@
     document.addEventListener("keydown", function (e) { if (e.key === "Escape") hide(); });
   }
 
+  /* ---------- Modal de caso (bento · desktop) ---------- */
+  function setupCaseModal() {
+    var modal = document.getElementById("csModal");
+    var body = document.getElementById("csModalBody");
+    var close = document.getElementById("csModalClose");
+    if (!modal || !body) return;
+    function open(caseId) {
+      var src = document.querySelector('.cs[data-case="' + caseId + '"]');
+      if (!src) return;
+      body.innerHTML = "";
+      ["cs__eyebrow", "cs__title", "cs__metaline", "cs__sub"].forEach(function (cls) {
+        var el = src.querySelector("." + cls);
+        if (el) body.appendChild(el.cloneNode(true));
+      });
+      var facts = src.querySelector(".cs__facts");
+      if (facts) { var f = facts.cloneNode(true); f.classList.add("is-visible-facts"); body.appendChild(f); }
+      modal.classList.add("is-open");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    }
+    function hide() {
+      modal.classList.remove("is-open");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    }
+    document.querySelectorAll(".tile__open[data-case]").forEach(function (btn) {
+      btn.addEventListener("click", function () { open(btn.getAttribute("data-case")); });
+    });
+    close.addEventListener("click", hide);
+    modal.addEventListener("click", function (e) { if (e.target === modal) hide(); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && modal.classList.contains("is-open")) hide(); });
+  }
+
   /* ---------- Nav sombra ---------- */
   function setupNavShadow() {
     var nav = document.getElementById("nav");
@@ -328,6 +361,7 @@
     setupThemeToggle();
     setupReveal();
     setupLightbox();
+    setupCaseModal();
     setupNavShadow();
     setupScrollFx();
     setupCvMenu();
